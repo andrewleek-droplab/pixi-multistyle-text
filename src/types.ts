@@ -75,7 +75,7 @@ export interface TextStyleExtendedWithDefault extends TextStyleExtended {
   fontVariant: string;
   fontWeight: string;
   letterSpacing: number;
-  lineHeight: number;
+  lineHeight: number | undefined;
   lineSpacing: number;
   lineJoin: string;
   miterLimit: number;
