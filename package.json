@@ -1,5 +1,5 @@
 {
-  "name": "@plainblack/pixi-multistyle-text",
+  "name": "@andrewleek-droplab/pixi-multistyle-text",
   "version": "1.0.0",
   "description": "Multi-Style Text for pixi.js",
   "source": "src/index.ts",
@@ -12,12 +12,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/plainblack/pixi-multistyle-text.git"
+    "url": "git://github.com/andrewleek-droplab/pixi-multistyle-text.git"
   },
   "bugs": {
-    "url": "https://github.com/plainblack/pixi-multistyle-text/issues"
+    "url": "https://github.com/andrewleek-droplab/pixi-multistyle-text/issues"
   },
-  "homepage": "https://github.com/plainblack/pixi-multistyle-text",
+  "homepage": "https://github.com/andrewleek-droplab/pixi-multistyle-text",
   "keywords": [
     "pixi",
     "pixi.js",
