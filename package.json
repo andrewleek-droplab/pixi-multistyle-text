@@ -1,6 +1,6 @@
 {
   "name": "@andrewleek-droplab/pixi-multistyle-text",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Multi-Style Text for pixi.js",
   "source": "src/index.ts",
   "main": "dist/pixi-multistyle-text.js",
