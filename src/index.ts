@@ -77,7 +77,7 @@ export default class MultiStyleText extends PIXI.Text {
     fontVariant: "normal",
     fontWeight: "normal",
     letterSpacing: 0,
-    lineHeight: 0,
+    lineHeight: undefined,
     lineSpacing: 0,
     lineJoin: "miter",
     miterLimit: 10,
@@ -867,6 +867,7 @@ export default class MultiStyleText extends PIXI.Text {
     const lineYMaxs: number[] = [];
     let maxLineWidth = 0;
     const lineSpacing = textStyles["default"].lineSpacing;
+    const lineHeight = textStyles["default"].lineHeight;
 
     for (let lineIndex = 0; lineIndex < textDataLines.length; lineIndex++) {
       const line = textDataLines[lineIndex];
@@ -925,6 +926,20 @@ export default class MultiStyleText extends PIXI.Text {
 
       if (lineIndex > 0 && lineSpacing) {
         lineYMaxs[lineIndex] += lineSpacing;
+      }
+
+      if (typeof lineHeight === "number")
+      {
+        if( lineIndex === 0 )
+        {
+          lineYMins[lineIndex] = 0;
+          lineYMaxs[lineIndex] = Math.max(lineYMax - lineYMin,lineHeight);
+        }
+        else
+        {
+          lineYMins[lineIndex] = 0;
+          lineYMaxs[lineIndex] = lineHeight;
+        }
       }
 
       maxLineWidth = Math.max(maxLineWidth, lineWidth);
