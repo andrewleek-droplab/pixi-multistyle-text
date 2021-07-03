@@ -930,15 +930,9 @@ export default class MultiStyleText extends PIXI.Text {
 
       if (typeof lineHeight === "number")
       {
-        if( lineIndex === 0 )
+        if( lineIndex > 0 )
         {
-          lineYMins[lineIndex] = 0;
-          lineYMaxs[lineIndex] = Math.max(lineYMax - lineYMin,lineHeight);
-        }
-        else
-        {
-          lineYMins[lineIndex] = 0;
-          lineYMaxs[lineIndex] = lineHeight;
+          lineYMaxs[lineIndex] = lineYMins[lineIndex] + lineHeight;
         }
       }
 
