@@ -68,7 +68,7 @@ export default class MultiStyleText extends PIXI.Text {
     dropShadowAngle: Math.PI / 6,
     dropShadowBlur: 0,
     dropShadowColor: "#000000",
-    dropShadowDistance: 5,
+    dropShadowDistance: 0,
     fill: "black",
     fillGradientType: PIXI.TEXT_GRADIENT.LINEAR_VERTICAL,
     fontFamily: "Arial",
@@ -1024,8 +1024,7 @@ export default class MultiStyleText extends PIXI.Text {
         const { style, text, fontProperties, width, tag } = textData;
         const ls = style.letterSpacing || 0;
 
-        let linePositionY =
-          lineMeasurements.basePositionY + fontProperties.ascent;
+        let linePositionY = lineMeasurements.basePositionY + fontProperties.ascent;
 
         switch (style.valign) {
           case "top":
